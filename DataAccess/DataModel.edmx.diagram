@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="77e22084a7db4a668e55cf3e89d17c8b" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="dbelogikModel.AccountCodesLog" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AccountCodesLogEvent" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Avize" Width="1.5" PointX="14.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AvizeDetail" Width="1.5" PointX="17" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AvizeInterne" Width="1.5" PointX="14.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AvizeInterneDetail" Width="1.5" PointX="17" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AvizeVanzare" Width="1.5" PointX="2.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AvizeVanzareDetail" Width="1.5" PointX="5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AvizeVanzareExplosion" Width="1.5" PointX="7.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BadCheckFile" Width="1.5" PointX="5.25" PointY="99.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BadCheckPenalty" Width="1.5" PointX="3" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BadCheckReason" Width="1.5" PointX="3" PointY="71.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BankFile" Width="1.5" PointX="3" PointY="111.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BCTicketDetail" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BCTicket" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BileteInHouse" Width="1.5" PointX="8.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CashTray" Width="1.5" PointX="11" PointY="76" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CCOrder" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowCategorii" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowConturi" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowEstimareObiective" Width="1.5" PointX="14.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowEstimareObiectiveDetail" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowEstimariBuget" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowObiectiveBuget" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowObiectiveBugetDetail" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowOperatiuni" Width="1.5" PointX="19.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowPreluareVanzari" Width="1.5" PointX="19.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CFlowScadente" Width="1.5" PointX="19.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ComenziProductieDetaliiEM" Width="1.5" PointX="17" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ComenziProductieEM" Width="1.5" PointX="14.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ComplimentaryAmount" Width="1.5" PointX="24.75" PointY="92.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ContabConf" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CorespondenteAlte" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CorespondenteAprovizionari" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CorespondenteCometa" Width="1.5" PointX="8.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CRItem" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CRTicketDetail" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CRTicket" Width="1.5" PointX="18.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CSCategorii" Width="1.5" PointX="20.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CSDetailsInventory" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CSDetailsMenu" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CSSession" Width="1.5" PointX="21.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerCreditAccount" Width="1.5" PointX="8.25" PointY="100.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerCredit" Width="1.5" PointX="11.25" PointY="102.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerEventOption" Width="1.5" PointX="21.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerEvent" Width="1.5" PointX="21.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerEventsOption" Width="1.5" PointX="12.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerEventsParticipant" Width="1.5" PointX="22.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerFile" Width="1.5" PointX="3" PointY="100.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerGroup" Width="1.5" PointX="22.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerHourCost" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomerTimeCard" Width="1.5" PointX="23.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CustomPrinterType" Width="1.5" PointX="23.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DbVersion" Width="1.5" PointX="14.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DbVersion2" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Delegati" Width="1.5" PointX="2.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DepartamenteCM" Width="1.5" PointX="4.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DepartamenteLocalToCM" Width="1.5" PointX="6.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DepositSlip" Width="1.5" PointX="9.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DineInTableGroup" Width="1.5" PointX="15" PointY="78.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DineInTable" Width="1.5" PointX="17.25" PointY="77" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Discount" Width="1.5" PointX="17.25" PointY="104.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Discounturi" Width="1.5" PointX="8.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Diverse" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DiverseDetail" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Email" Width="1.5" PointX="5.25" PointY="77.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.EmployeeFile" Width="1.5" PointX="3" PointY="82.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.EmployeePayrollHistory" Width="1.5" PointX="5.25" PointY="82.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.EmployeeSchedule" Width="1.5" PointX="5.25" PointY="89.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.EmployeeTimeCard" Width="1.5" PointX="7.5" PointY="85.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ExpCont" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ExpContHistory" Width="1.5" PointX="20.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Export" Width="1.5" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturaDetaliiPlata" Width="1.5" PointX="10" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Facturi" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturiDetail" Width="1.5" PointX="10" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturiExplosion" Width="1.5" PointX="12.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturiMarfa" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturiMarfaDetail" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturiMarfaExplosion" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FisiereMultiple" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FreqDinerFile" Width="1.5" PointX="11.25" PointY="96.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Gestiuni" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GiftCertificate" Width="1.5" PointX="5.25" PointY="109.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GrupeTVACM" Width="1.5" PointX="25.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GrupeTVALocalToCM" Width="1.5" PointX="25.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GrupuriCM" Width="1.5" PointX="25.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GrupuriLocalToCM" Width="1.5" PointX="22.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ICHistory" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.IesiriGestiune" Width="1.5" PointX="10.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ImprimanteMultiple" Width="1.5" PointX="12.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryClientsInfo" Width="1.5" PointX="26.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryGroup" Width="1.5" PointX="28.5" PointY="109.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryItemIngredient" Width="1.5" PointX="26.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryItem" Width="1.5" PointX="30.75" PointY="112.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryItemsInfo" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryLocation" Width="1.5" PointX="28.5" PointY="114.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryPhysicalCount" Width="1.5" PointX="33" PointY="113.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryVendor" Width="1.5" PointX="28.5" PointY="119.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryVendorsInfo" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.IVHistory" Width="1.5" PointX="0.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.JobTitle" Width="1.5" PointX="0.75" PointY="88.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.LogikPOSSetting" Width="1.5" PointX="2.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.LogikPOSSettingsRezervari" Width="1.5" PointX="4.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.LogikSecurityEmployeeRole" Width="1.5" PointX="27.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.LogikSecurityRolePermission" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.LogikSecurityRole" Width="1.5" PointX="27.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MapariPuncteLucru" Width="1.5" PointX="27.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MeniuriModificatori" Width="1.5" PointX="28.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuCategory" Width="1.5" PointX="23.25" PointY="110.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuGroup" Width="1.5" PointX="23.25" PointY="115.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItemPrice" Width="1.5" PointX="27.75" PointY="125.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItem" Width="1.5" PointX="25.5" PointY="106.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItemsGroupsGlovo2" Width="1.5" PointX="28.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuModifierPopUp" Width="1.5" PointX="33.75" PointY="108.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuModifier" Width="1.5" PointX="31.5" PointY="103.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ModPlataF" Width="1.5" PointX="18.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Niruri" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.NiruriDetail" Width="1.5" PointX="28.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OnAccountCharge" Width="1.5" PointX="24.75" PointY="98.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OnAccountPayment" Width="1.5" PointX="10.25" PointY="88.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OperatoriFacturare" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderHeader" Width="1.5" PointX="19.5" PointY="90.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderHeadersIZ" Width="1.5" PointX="29.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderPayment" Width="1.5" PointX="21.75" PointY="86.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderTransaction" Width="1.5" PointX="27.75" PointY="90.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderTransactionsCR" Width="1.5" PointX="29.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OtherPayment" Width="1.5" PointX="16.5" PointY="96.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PayOut" Width="1.5" PointX="10.25" PointY="81.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Persoane" Width="1.5" PointX="12.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PlajeFacturare" Width="1.5" PointX="29.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PrankCallFile" Width="1.5" PointX="21.75" PointY="99.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ProdOrderExplosion" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ProdOrderHeader" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ProdOrderTransaction" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Profile" Width="1.5" PointX="29.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ProfileInventoryItem" Width="1.5" PointX="14.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ProfileMenuItem" Width="1.5" PointX="22.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PuncteLucru" Width="1.5" PointX="24.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PurchaseOrderDetail" Width="1.5" PointX="36" PointY="117" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PurchaseOrder" Width="1.5" PointX="30.75" PointY="122.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PVChanx" Width="1.5" PointX="26.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PVDay" Width="1.5" PointX="28.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PVHistory" Width="1.5" PointX="2.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RegisterCashier" Width="1.5" PointX="13.25" PointY="85.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ReplicationHistory" Width="1.5" PointX="4.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ReplicationMap" Width="1.5" PointX="6.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ReplicationMapNoText" Width="1.5" PointX="8.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RezervariHistory" Width="1.5" PointX="30.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RezervariHotel" Width="1.5" PointX="30.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Room" Width="1.5" PointX="30.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RoomsCaracteristics1" Width="1.5" PointX="30.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RoomsCaracteristics2" Width="1.5" PointX="30.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RoomsCaracteristics3" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.SecuritySetting" Width="1.5" PointX="31.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.StationSetting" Width="1.5" PointX="11" PointY="109.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.StocuriHistory" Width="1.5" PointX="31.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.StocuriSession" Width="1.5" PointX="16.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Subretete" Width="1.5" PointX="30.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.SubreteteDetail" Width="1.5" PointX="32.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Surcharge" Width="1.5" PointX="17.25" PointY="114" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Taxe" Width="1.5" PointX="12.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.TaxeDetalii" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.TipRezervareHotel" Width="1.5" PointX="32.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpMenuExplosion" Width="1.5" PointX="32.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpOrderTransaction" Width="1.5" PointX="22.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapVanzariOT" Width="1.5" PointX="32.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.TZero" Width="1.5" PointX="24.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.UnitatiMasura" Width="1.5" PointX="32.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.UpdateSummaryQueue" Width="1.5" PointX="26.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.vInventoryItem" Width="1.5" PointX="32.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.vInventoryItemsIZ" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.vMenuExplosion" Width="1.5" PointX="6.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.vMenuItem" Width="1.5" PointX="8.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ZipCode" Width="1.5" PointX="0.75" PointY="97.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AccessDeniedLog" Width="1.5" PointX="14.25" PointY="95.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.AdaugareME" Width="1.5" PointX="33.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.BarTabPreAuth" Width="1.5" PointX="0.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CallerIDLog" Width="1.5" PointX="2.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CCPreAuth" Width="1.5" PointX="34.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ChecksForDeposit" Width="1.5" PointX="12" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.CSDetailsMenuExplosion" Width="1.5" PointX="34.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DailyClosingRegistry" Width="1.5" PointX="18.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DailyInvRecap" Width="1.5" PointX="34.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DBCompatibility" Width="1.5" PointX="34.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DiscounturiPersoane" Width="1.5" PointX="28.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.DisponibilPentru" Width="1.5" PointX="34.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturaTable" Width="1.5" PointX="34.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FacturiOrder" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FidelizareCFEM" Width="1.5" PointX="35.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FoodStampUsage" Width="1.5" PointX="14.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.FreqDinerTracking" Width="1.5" PointX="21.75" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GeneralSetting" Width="1.5" PointX="3" PointY="139.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.GiftCertificateUsage" Width="1.5" PointX="30.75" PointY="96.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryClient" Width="1.5" PointX="35.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.InventoryUOM" Width="1.5" PointX="24.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ManagerCashOut" Width="1.5" PointX="36.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuExplosion" Width="1.5" PointX="33" PointY="97.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuGroupSchedule" Width="1.5" PointX="10.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItemIngredient" Width="1.5" PointX="36" PointY="111.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItemIngredientsCuPierderi" Width="1.5" PointX="36.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItemsGroupsGlovo" Width="1.5" PointX="36.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.MenuItemsGroupsSite" Width="1.5" PointX="36.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ModBuilderDetail" Width="1.5" PointX="36.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ModBuilderTemplate" Width="1.5" PointX="36.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.NewFactura" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.NirSummaryUpdate" Width="1.5" PointX="37.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.NoSaleLog" Width="1.5" PointX="15.5" PointY="89" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderCheckDriverLicenseLog" Width="1.5" PointX="24.75" PointY="86.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderDiscount" Width="1.5" PointX="30.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderRefund" Width="1.5" PointX="27.75" PointY="83.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderTransactionsModifier" Width="1.5" PointX="4.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.OrderVoidLog" Width="1.5" PointX="30" PointY="89.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PDAClient" Width="1.5" PointX="38.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PersoaneSolduri" Width="1.5" PointX="38.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.POSClient" Width="1.5" PointX="16.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.PrimaryData" Width="1.5" PointX="38.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapBacsis1" Width="1.5" PointX="18.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapBacsis2" Width="1.5" PointX="38.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapConsum" Width="1.5" PointX="38.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapConsumCuDiscount" Width="1.5" PointX="26.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapConsumGeneral" Width="1.5" PointX="38.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapConsumTotal" Width="1.5" PointX="38.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapEvolutieGestiune" Width="1.5" PointX="32.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapEvolutieGestiuneNou" Width="1.5" PointX="38.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapFidelizare" Width="1.5" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapFisaMagazie" Width="1.5" PointX="39.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapFolosireDiscounturi" Width="1.5" PointX="0.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapModificatori" Width="1.5" PointX="40.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapOspatariDetaliat" Width="1.5" PointX="40.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapOspatariDetaliatCotaTVA" Width="1.5" PointX="40.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapOspatariGlobal" Width="1.5" PointX="40.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapPeZile1" Width="1.5" PointX="40.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapProfitVanzare" Width="1.5" PointX="40.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapStocuri" Width="1.5" PointX="40.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapVanzari" Width="1.5" PointX="40.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapVanzariAchizitii" Width="1.5" PointX="40.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapVanzariAnulari" Width="1.5" PointX="38.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RapVanzariComenzi" Width="1.5" PointX="40.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Reservation" Width="1.5" PointX="2.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RowChanx" Width="1.5" PointX="41.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.RowDeleteLog" Width="1.5" PointX="4.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ServerDrawer" Width="1.5" PointX="10.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.SolduriInitiale" Width="1.5" PointX="41.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.sOrderPayment" Width="1.5" PointX="12.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Street" Width="1.5" PointX="18.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpAux" Width="1.5" PointX="28.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpAux2" Width="1.5" PointX="42.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapConsum" Width="1.5" PointX="42.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapConsumCuDiscount" Width="1.5" PointX="42.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapConsumTotal" Width="1.5" PointX="14.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapEvolutieGestiune" Width="1.5" PointX="42.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapEvolutieGestiuneNou" Width="1.5" PointX="42.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapFidelizare" Width="1.5" PointX="24.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapFisaMagazie" Width="1.5" PointX="42.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapFisaMagazieC" Width="1.5" PointX="42.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapModificatori" Width="1.5" PointX="30.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapOspatariDetaliat" Width="1.5" PointX="42.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapOspatariDetaliatCotaTVA" Width="1.5" PointX="32.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapOspatariGlobal" Width="1.5" PointX="42.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapPeZile1" Width="1.5" PointX="42.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapProfitVanzare" Width="1.5" PointX="43.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapStocuri" Width="1.5" PointX="43.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapVanzari" Width="1.5" PointX="38.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpRapVanzariComenzi" Width="1.5" PointX="44.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpSlowMovingItem" Width="1.5" PointX="44.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.tmpsOrderPayment" Width="1.5" PointX="44.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.Transferuri" Width="1.5" PointX="44.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.vOrderTransaction" Width="1.5" PointX="44.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbelogikModel.ZReport" Width="1.5" PointX="26.75" PointY="44.75" IsExpanded="true" />
+        <AssociationConnector Association="dbelogikModel.AvizeDetails_AD_A_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.AvizeInterneDetails_AiD_Ai_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.AvizeVanzareDetails_FK_avize" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.AvizeVanzareExplosion_FK_AVE" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.BadCheckFiles__051629BC_9768_4F52_9AA6_086C8350D05C_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.BadCheckFiles__394C0D07_BF80_4F86_A3F9_791E6E1B17B2_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.BadCheckFiles__79338A1B_00BC_4C3E_B4DF_416D3F64DE06_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.BadCheckFiles__D720C359_3C54_42C5_905F_0998CE1085B0_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.BadCheckFiles__DD4105FB_70F5_4CFA_93F8_C65FABC4A2A4_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.BadCheckFiles__F8D3DCA0_9752_4BA1_A363_D9A25DCE947E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OtherPayments__483EA546_CC6A_4247_AFDD_B4807346979A_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.RegisterCashiers__80472614_FDCB_4065_B2DA_D4A61AFCCE0E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ComenziProductieDetaliiEM_FK_ComenziPDetalii" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ComplimentaryAmounts__2FD0D526_8B13_4D31_9DE9_64A29277A20A_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ComplimentaryAmounts__61780244_468E_4E6D_949E_0A47B25B17E9_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ComplimentaryAmounts__F0A12E0E_9E49_4DE0_BA24_82E481DBB907_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.CustomerCreditAccounts__31756F78_20A9_4EFB_85F0_B68F151A5BEE_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.CustomerCreditAccounts__AEB0C3F7_89DF_4A50_A95B_0A9F13648766_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.CustomerCredits__405FF4B1_C324_4345_8920_847486E8E455_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.CustomerCredits__7F99CFC6_31E6_4FCC_B5BC_155C6A8BB951_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FreqDinerTrackings__FE33F43B_1B2D_402A_B3C4_A5C03A5B5E5A_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__008044CE_3ACB_4F14_AAE0_80664F41F109_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.CustomerFiles__AB08BB0D_7955_4168_9D6F_DA5CF9010F33_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FreqDinerFiles__5D96D463_D7F0_4FAA_A33F_5CF80FC6F0E2_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FreqDinerTrackings__C6118471_A54F_434A_A9A2_A1320F0F765E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountCharges__3355E7DA_1431_4B71_A3F4_4495F6F60B46_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__7FD2CE77_7E21_478E_81D2_9EE1275D5932_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PrankCallFiles__59E4A985_BEF2_48BC_902E_AE084600D972_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ChecksForDeposit__6E2560C5_D903_4FD4_9DE2_687367EE8101_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.DineInTables__62D73C34_3B13_41D5_B4E2_EB5E77F21E2C_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__EB828388_D8D4_4E93_8281_7E0F276499D8_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__9BFA7837_596A_4832_AB97_2F92D88DD999_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderTransactions__912DBD61_BDF9_44C0_B957_040EFD98F2E5_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.Email__E8E34A22_C670_407E_B83A_1D36E8F4CFDC_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.Email__EAEE07C2_D370_486B_A5A1_246B7C340FE1_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.AccessDeniedLogs__DBA953DF_3B55_4F44_B4DD_3B702255D94E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeeFiles__1D61D2DD_72CD_48E3_BB33_BB9F49D0DF58_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeeFiles__32D0D5DC_7076_4B14_9BA3_B78CB28722E0_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeeFiles__601A96BD_7C13_4D5E_B74F_61D47E24855F_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeePayrollHistory__9C95EF3A_7029_4153_96C8_B98F8A1AE10A_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeeSchedules__E6D58605_AC0A_450D_BF74_2923F1C00AB9_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeeTimeCards__46A1C049_36F2_4460_9E2A_73665ADCAB5D_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FreqDinerTrackings__F3269AFB_E565_4334_BC24_032725330DC6_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GiftCertificates__FBC4A233_EB14_4E35_B251_61DE209176D2_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GiftCertificateUsages__92AA0CC3_90E0_455D_90C5_DD580130B62B_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.NoSaleLogs__80494C3C_2925_4E64_B183_961603CFE910_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountCharges__726A4926_F5AE_46D3_AA37_2B5D85E84944_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountPayments__41928B1B_C220_4739_BDA9_12A76AEACCD6_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderCheckDriverLicenseLogs__7540FA5D_782A_4740_BB68_FDCA6C333C63_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__4651D0A6_5150_40CB_8BFB_4137C891538E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__50C29815_C372_4FB2_B94A_BFF183BA621E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderPayments__921B7879_F571_47C7_BF64_B0BEE6F56168_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderRefunds__A3279915_E270_4FD2_A973_D9425FF4265E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderVoidLogs__E115AA8B_12E6_4388_9F24_0B562BEC9D6D_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OtherPayments__E483A024_57EC_40B0_A204_335EDCA99F33_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PayOuts__97900E76_3761_4CAA_A897_AEF7E50B8F05_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PayOuts__B2376EF9_01F4_4073_83D1_FD267CD0EA9E_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PrankCallFiles__C37C00CF_92B9_4410_9EE8_AB644419B89F_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.RegisterCashiers__60B3384C_8C6F_45D0_AF87_48F7AA2CA87C_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.RegisterCashiers__F0820AA1_D7D3_4DE6_AB3F_70A0D40658B3_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.EmployeeTimeCards__8864992E_0CBE_42B0_AC63_E210313DBCC1_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FacturaDetaliiPlata_FK_FacturiiDetalii" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FacturiDetails_FD_F_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FacturiExplosion_FE_FD_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FacturiMarfaDetails_FMD_FM_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FacturiMarfaExplosion_FME_FMD_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FreqDinerFiles__EEE12528_7CAF_43D8_9BEE_0B98A9CA239A_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GiftCertificateUsages__66C6D6C5_7553_4843_A2A1_AFD1DC7FACC5_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OtherPayments__71715F88_085D_46CF_AFD3_392428A88F66_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.InventoryItems__88244493_5C53_481F_BDA8_DE87E0246340_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.InventoryItems__38E928E0_A43C_4777_A005_59B2F8AB5B08_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.InventoryItems__BA7DF0BA_67DC_4520_9DA6_309375B200C0_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.InventoryPhysicalCounts__79AC4374_4297_42A9_949B_23CF6A293DE2_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuExplosion__E3C6AC96_6E27_46AD_817B_2FBC8258BEA9_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuItemIngredients__6D254CF8_2C6B_471C_88DE_0304E9F1A799_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PurchaseOrderDetails__8C351CDD_F3F7_4079_8487_48BE4CFAA411_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PurchaseOrders__A99C001E_2BAB_4D28_9FB7_04A12C052539_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuItems__577E718E_BF65_4EB8_A74C_F85E1CF60657_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuItems__0B976205_7383_41FB_A37D_1A2AED6EB555_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuItemPrices__71AF58D1_28AE_4173_8630_B5127864B336_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuItemIngredients__C2D0614B_C4B1_4F62_A25F_CE36C2DF80E7_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuModifierPopUps__B7B36087_0C3C_49A4_992E_DFEDC710A70F_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderTransactions__94BA92DC_FB98_42AA_9066_0BD7789C4329_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuModifierPopUps__CD4B9839_3883_4DDB_B001_EECFCAFAA2D9_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountCharges__0FE802EE_5A5B_440B_AA26_92963440E9C2_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountCharges__D399B43B_82D9_463C_8BA3_9DA055B149C3_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountCharges__E112004A_1F23_4B23_AF09_1ECE96AC10C6_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OnAccountPayments__87C03CBA_4A18_4725_878D_54FC256D28C9_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.FreqDinerTrackings__3B993C37_F3A6_43A1_9888_FF994CCD9770_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GiftCertificateUsages__656A6950_6161_4E70_B5AC_EEBD515255FE_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderCheckDriverLicenseLogs__E2689256_7C0B_4362_B694_4C72F1CBC097_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__56C8A453_5CD9_4283_9AB0_4D438C5A6F35_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderHeaders__97A6E4BA_EEBC_4D69_BF97_CD92E1C3DA5A_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderPayments__F00DE9E6_52AE_446F_8062_D7D02E07AD1C_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderRefunds__A5CCC412_49FD_4ACB_AFF4_DE262FA9C39D_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderTransactions__BD49C5CB_FA87_4C04_8531_435D23704534_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderVoidLogs__BDBBD2EB_A4B6_47A2_A1A5_72B8BE7789D6_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PrankCallFiles__DCFCDC15_045A_4B29_A710_EB7B4894E0F1_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderPayments__ADC6822C_A917_483E_B66D_DA717BA99E53_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.MenuExplosion__E58D6ABF_3B94_41F4_BC31_7E3E7D64ACE6_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderVoidLogs__90DCBB03_BAA9_48AB_8C0B_C1DE444C8A6B_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OtherPayments__A41075C3_A5BD_4816_A7AB_388270C482A9_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PayOuts__EBA0A3BB_53D2_43A2_B5E4_9A7FD6ABC0F1_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ProdOrderExplosion_POT_POE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.ProdOrderTransactions_POH_POT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.PurchaseOrderDetails__13F74816_1CA4_4B34_AEFF_B7044FE29C41_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GiftCertificateUsages__80BA10F0_02B7_4331_B17C_08FB83620672_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.NoSaleLogs__F8928EDD_C38F_48A9_9F0F_6FC1B26F6584_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.OrderRefunds__C2740155_D12D_4D7E_A7A1_33029FECC7F4_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.RegisterCashiers__253F13B8_91C6_4121_8D26_A4B7E7447E42_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.AccessDeniedLogs__B6EE87BF_AF96_4895_ABFC_37A4CE5ED35D_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.TaxeDetalii_FK_TaxeDetalii" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GeneralSettings__4E89564E_F8E1_459D_A506_236E8791BCEE_" ManuallyRouted="false" />
+        <AssociationConnector Association="dbelogikModel.GeneralSettings__B474BA1E_8C3C_4768_AD79_92D1691F850E_" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

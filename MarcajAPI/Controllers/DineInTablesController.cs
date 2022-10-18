@@ -24,7 +24,7 @@ namespace MarcajAPI.Controllers
         }
 
        
-        public List<CDineInTableAndEmpModel> Get(int dineInTableGroupID)
+        public List<CDineInTableAndEmpModel> Get(int dineInTableGroupID,  string type)
         {
             using (dbelogikEntities en = new dbelogikEntities())
             {
@@ -32,8 +32,17 @@ namespace MarcajAPI.Controllers
 
                 var returnList = new List<CDineInTableAndEmpModel>();
                 
-                var  lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID).ToList();
-                foreach(var dine in lst)
+                List<DineInTable> lst = new List<DineInTable>();
+                if(type == "all")
+                {
+                    lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID ).ToList();
+
+                }
+                else if(type == "active")
+                {
+                    lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID&& x.DineInTableInActive== true).ToList();
+                }
+                foreach (var dine in lst)
                 {
                     var model = new CDineInTableAndEmpModel();
                     model.DineIn = dine;
@@ -87,8 +96,14 @@ namespace MarcajAPI.Controllers
                 {
                     var a = en.DineInTables.FirstOrDefault(x => x.DineInTableID == id);
 
-                    a.DineInTableInActive = item.DineInTableInActive;
-
+                    if(a.DineInTableInActive==true)
+                    {
+                        a.DineInTableInActive = false;
+                    }
+                    else
+                    {
+                        a.DineInTableInActive = true;
+                    }
 
                     en.SaveChanges();
                     var message = Request.CreateResponse(HttpStatusCode.Created, item);

@@ -99,6 +99,7 @@ namespace DataAccess
         public Nullable<short> RowOwner { get; set; }
         public string RowGUID { get; set; }
         public string EmployeeName { get; set; }
+        public Nullable<bool> BarOrder { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BadCheckFile> BadCheckFiles { get; set; }

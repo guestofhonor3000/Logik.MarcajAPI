@@ -18,8 +18,8 @@ namespace MarcajAPI.Controllers
     
     public class OrderHeadersController : ApiController
     {
-      
 
+     
         public List<OrderHeader> Get()
         {
             using(dbelogikEntities en = new dbelogikEntities())
@@ -84,7 +84,7 @@ namespace MarcajAPI.Controllers
             }
         }
       
-        public List<OrderHeader> Get(string sync)
+        public List<OrderHeader> Get(string sync, int empId)
         {
             using (dbelogikEntities en = new dbelogikEntities())
             {
@@ -95,7 +95,26 @@ namespace MarcajAPI.Controllers
                     var b = en.OrderHeaders.Where(x => x.OrderDateTime > DbFunctions.AddDays(DateTime.Now, -2)).ToList();
                     a = b;
                 }
-
+                else if(sync =="No")
+                {
+                    var b = en.OrderHeaders.Where(x => x.OrderStatus == "1").OrderByDescending(x => x.OrderID).ToList();
+                    a = b;
+                }
+                else if(sync == "Bar")
+                {
+                    var b = en.OrderHeaders.Where(x => x.BarOrder ==true && x.OrderStatus=="1").OrderByDescending(x => x.OrderID).ToList();
+                    a = b;
+                }
+                else if(sync == "EmpLogged")
+                {
+                    var b = en.OrderHeaders.Where(x => x.EmployeeID == empId && x.OrderStatus == "1").OrderByDescending(x => x.OrderID).ToList();
+                    a = b;
+                }
+                else if (sync == "Restaurant")
+                {
+                    var b = en.OrderHeaders.Where(x => x.BarOrder == false && x.OrderStatus == "1").OrderByDescending(x => x.OrderID).ToList();
+                    a = b;
+                }
                 return a;
             }
         }

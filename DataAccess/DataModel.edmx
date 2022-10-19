@@ -3451,6 +3451,7 @@ warning 6002: The table/view 'dbelogik.dbo.OrderDiscounts' does not have a prima
           <Property Name="RowOwner" Type="smallint" />
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="EmployeeName" Type="varchar" MaxLength="255" />
+          <Property Name="BarOrder" Type="bit" />
         </EntityType>
         <EntityType Name="OrderHeadersIZ">
           <Key>
@@ -11759,6 +11760,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <NavigationProperty Name="OrderVoidLogs" Relationship="Self.OrderVoidLogs__BDBBD2EB_A4B6_47A2_A1A5_72B8BE7789D6_" FromRole="OrderHeaders" ToRole="OrderVoidLogs" />
           <NavigationProperty Name="PrankCallFiles" Relationship="Self.PrankCallFiles__DCFCDC15_045A_4B29_A710_EB7B4894E0F1_" FromRole="OrderHeaders" ToRole="PrankCallFiles" />
           <Property Name="EmployeeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BarOrder" Type="Boolean" />
         </EntityType>
         <EntityType Name="OrderHeadersIZ">
           <Key>
@@ -19349,6 +19351,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <EntitySetMapping Name="OrderHeaders">
             <EntityTypeMapping TypeName="dbelogikModel.OrderHeader">
               <MappingFragment StoreEntitySet="OrderHeaders">
+                <ScalarProperty Name="BarOrder" ColumnName="BarOrder" />
                 <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="OrderDateTime" ColumnName="OrderDateTime" />

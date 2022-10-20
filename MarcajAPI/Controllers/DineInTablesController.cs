@@ -23,43 +23,65 @@ namespace MarcajAPI.Controllers
             }
         }
 
-       
-        public List<CDineInTableAndEmpModel> Get(int dineInTableGroupID,  string type)
+
+        public List<CDineInTableAndEmpModel> Get(int dineInTableGroupID, string type)
         {
             using (dbelogikEntities en = new dbelogikEntities())
             {
                 en.Configuration.ProxyCreationEnabled = false;
 
                 var returnList = new List<CDineInTableAndEmpModel>();
-                
+
                 List<DineInTable> lst = new List<DineInTable>();
-                if(type == "all")
+                if (type == "all")
                 {
-                    lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID ).ToList();
+                    lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID).ToList();
 
                 }
-                else if(type == "active")
+                else if (type == "active")
                 {
-                    lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID&& x.DineInTableInActive== true).ToList();
+                    lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID && x.DineInTableInActive == true).ToList();
                 }
                 foreach (var dine in lst)
                 {
                     var model = new CDineInTableAndEmpModel();
                     model.DineIn = dine;
                     returnList.Add(model);
-
                 }
-                
-                foreach(var item in returnList)
+
+                /*foreach(var item in returnList)
+                {
+                    var oH = en.OrderHeaders.Where(x => x.DineInTableID == item.DineIn.DineInTableID).OrderByDescending(x => x.OrderID).FirstOrDefault();
+                    if(oH != null)
+                    {
+                        if (oH.OrderStatus == "1")
+                        {
+                            item.Opened = true;
+                        }
+                        else
+                        {
+                            item.Opened = false;
+                        }
+                    }
+                    else
+                    {
+                        item.Opened = false;
+                    }
+                }*/
+
+                foreach (var item in returnList)
                 {
                     var id = GetId(item.DineIn.DineInTableID);
+                    var opened = GetStatus(item.DineIn.DineInTableID);
                     Debug.WriteLine(id);
                     try
                     {
+                        item.Opened = opened;
                         var b = en.EmployeeFiles.Where(x => x.EmployeeID == id).ToList();
-                        if(b.Count!=0)
+                        if (b.Count != 0)
                         {
                             item.EmpName = b[0].FirstName;
+                           
                         }
                     }
                     catch
@@ -68,7 +90,7 @@ namespace MarcajAPI.Controllers
                     }
                 }
                 return returnList;
-             
+
             }
 
         }
@@ -85,6 +107,29 @@ namespace MarcajAPI.Controllers
                 else
                 {
                     return -1;
+                }
+            }
+        }
+
+        public bool GetStatus(int id)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
+                if(a!=null)
+                {
+                    if (a.OrderStatus == "1")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
                 }
             }
         }

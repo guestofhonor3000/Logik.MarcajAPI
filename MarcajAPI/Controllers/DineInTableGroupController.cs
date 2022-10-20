@@ -34,6 +34,18 @@ namespace MarcajAPI.Controllers
                     }
                     else
                     {
+                        var dineIns = entities.DineInTables.Where(x => x.TableGroupID == entity.TableGroupID).ToList();
+                        List<DineInTable> ids = new List<DineInTable>();
+
+                        foreach(var dineIn in dineIns)
+                        {
+                            ids.Add(dineIn);   
+                        }
+
+                        foreach(var idd in ids)
+                        {
+                            entities.DineInTables.Remove(idd);
+                        }
                         entities.DineInTableGroups.Remove(entity);
                         entities.SaveChanges();
                         return Request.CreateResponse(HttpStatusCode.OK);
@@ -45,7 +57,26 @@ namespace MarcajAPI.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
+        [HttpPost]
+        public HttpResponseMessage Post([FromBody] DineInTableGroup item)
+        {
+            try
+            {
+                using (dbelogikEntities en = new dbelogikEntities())
+                {
+                    en.DineInTableGroups.Add(item);
+                    en.SaveChanges();
 
+                    var message = Request.CreateResponse(HttpStatusCode.Created, item);
+                    message.Headers.Location = new Uri(Request.RequestUri + item.TableGroupID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
         public HttpResponseMessage Put([FromBody] DineInTableGroup item, int id)
         {
             try

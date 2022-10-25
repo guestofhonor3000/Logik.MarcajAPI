@@ -37,12 +37,12 @@ namespace MarcajAPI.Controllers
                         var dineIns = entities.DineInTables.Where(x => x.TableGroupID == entity.TableGroupID).ToList();
                         List<DineInTable> ids = new List<DineInTable>();
 
-                        foreach(var dineIn in dineIns)
+                        foreach (var dineIn in dineIns)
                         {
-                            ids.Add(dineIn);   
+                            ids.Add(dineIn);
                         }
 
-                        foreach(var idd in ids)
+                        foreach (var idd in ids)
                         {
                             entities.DineInTables.Remove(idd);
                         }
@@ -84,9 +84,18 @@ namespace MarcajAPI.Controllers
                 using (dbelogikEntities en = new dbelogikEntities())
                 {
                     var a = en.DineInTableGroups.FirstOrDefault(x => x.TableGroupID == id);
+                    if (item.TableGroupText == "" || item.TableGroupText == null)
+                    {
+                        if (item.GridSize != null)
+                        {
+                            a.GridSize = item.GridSize;
+                        }
+                    }
+                    else
+                    {
+                        a.TableGroupText = item.TableGroupText;
+                    }
 
-                    a.TableGroupText = item.TableGroupText;
-                   
                     en.SaveChanges();
                     var message = Request.CreateResponse(HttpStatusCode.Created, item);
                     message.Headers.Location = new Uri(Request.RequestUri + item.TableGroupID.ToString());

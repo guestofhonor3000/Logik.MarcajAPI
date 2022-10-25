@@ -95,6 +95,16 @@ namespace MarcajAPI.Controllers
 
         }
 
+        public List<DineInTable> Get(int dineInTableGroupID)
+        {
+            using(dbelogikEntities en = new dbelogikEntities())
+            {
+                en.Configuration.ProxyCreationEnabled = false;
+
+                var a = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID && x.DineInTableInActive==true).ToList();
+                return a;
+            }
+        }
         public int GetId(int id)
         {
             using(dbelogikEntities en = new dbelogikEntities())
@@ -133,7 +143,7 @@ namespace MarcajAPI.Controllers
                 }
             }
         }
-        public HttpResponseMessage Put([FromBody] DineInTable item, int id)
+        public HttpResponseMessage Put([FromBody] DineInTable item, int id, string type)
         {
             try
             {
@@ -141,14 +151,23 @@ namespace MarcajAPI.Controllers
                 {
                     var a = en.DineInTables.FirstOrDefault(x => x.DineInTableID == id);
 
-                    if(a.DineInTableInActive==true)
+                    if (type == "status")
                     {
-                        a.DineInTableInActive = false;
+                        if (a.DineInTableInActive == true)
+                        {
+                            a.DineInTableInActive = false;
+                        }
+                        else
+                        {
+                            a.DineInTableInActive = true;
+                        }
                     }
-                    else
+                    else if (type == "position")
                     {
-                        a.DineInTableInActive = true;
+                        a.DisplayPosition = item.DisplayPosition;
                     }
+
+                    
 
                     en.SaveChanges();
                     var message = Request.CreateResponse(HttpStatusCode.Created, item);

@@ -33,6 +33,7 @@ namespace DataAccess
         public string LastRowHash { get; set; }
         public Nullable<short> RowOwner { get; set; }
         public string RowGUID { get; set; }
+        public string GridSize { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DineInTable> DineInTables { get; set; }

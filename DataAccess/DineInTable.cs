@@ -51,6 +51,7 @@ namespace DataAccess
         public Nullable<short> RowOwner { get; set; }
         public string RowGUID { get; set; }
         public byte[] SSMA_TimeStamp { get; set; }
+        public string DisplayPosition { get; set; }
     
         public virtual DineInTableGroup DineInTableGroup { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1195,6 +1195,7 @@ warning 6002: The table/view 'dbelogik.dbo.DBCompatibility' does not have a prim
           <Property Name="LastRowHash" Type="nvarchar" MaxLength="50" />
           <Property Name="RowOwner" Type="smallint" />
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GridSize" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="DineInTables">
           <Key>
@@ -1231,6 +1232,7 @@ warning 6002: The table/view 'dbelogik.dbo.DBCompatibility' does not have a prim
           <Property Name="RowOwner" Type="smallint" />
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="DisplayPosition" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Discounts">
           <Key>
@@ -10261,6 +10263,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <Property Name="RowOwner" Type="Int16" />
           <Property Name="RowGUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="DineInTables" Relationship="Self.DineInTables__62D73C34_3B13_41D5_B4E2_EB5E77F21E2C_" FromRole="DineInTableGroups" ToRole="DineInTables" />
+          <Property Name="GridSize" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="DineInTable">
           <Key>
@@ -10299,6 +10302,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <Property Name="SSMA_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
           <NavigationProperty Name="DineInTableGroup" Relationship="Self.DineInTables__62D73C34_3B13_41D5_B4E2_EB5E77F21E2C_" FromRole="DineInTables" ToRole="DineInTableGroups" />
           <NavigationProperty Name="OrderHeaders" Relationship="Self.OrderHeaders__EB828388_D8D4_4E93_8281_7E0F276499D8_" FromRole="DineInTables" ToRole="OrderHeaders" />
+          <Property Name="DisplayPosition" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Discount">
           <Key>
@@ -17955,6 +17959,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <EntitySetMapping Name="DineInTableGroups">
             <EntityTypeMapping TypeName="dbelogikModel.DineInTableGroup">
               <MappingFragment StoreEntitySet="DineInTableGroups">
+                <ScalarProperty Name="GridSize" ColumnName="GridSize" />
                 <ScalarProperty Name="TableGroupID" ColumnName="TableGroupID" />
                 <ScalarProperty Name="TableGroupText" ColumnName="TableGroupText" />
                 <ScalarProperty Name="EditTimestamp" ColumnName="EditTimestamp" />
@@ -17974,6 +17979,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <EntitySetMapping Name="DineInTables">
             <EntityTypeMapping TypeName="dbelogikModel.DineInTable">
               <MappingFragment StoreEntitySet="DineInTables">
+                <ScalarProperty Name="DisplayPosition" ColumnName="DisplayPosition" />
                 <ScalarProperty Name="DineInTableID" ColumnName="DineInTableID" />
                 <ScalarProperty Name="DineInTableText" ColumnName="DineInTableText" />
                 <ScalarProperty Name="TableGroupID" ColumnName="TableGroupID" />

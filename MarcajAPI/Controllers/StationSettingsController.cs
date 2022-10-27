@@ -10,6 +10,17 @@ namespace MarcajAPI.Controllers
 {
     public class StationSettingsController : ApiController
     {
+        
+        public StationSetting Get(string stationName)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                en.Configuration.ProxyCreationEnabled = false;
+                var station = en.StationSettings.Where(x => x.ComputerName == stationName).FirstOrDefault();
+                return station;
+            }
+        }
+
         [HttpPost]
         public HttpResponseMessage Post([FromBody] StationSetting item)
         {
@@ -31,14 +42,5 @@ namespace MarcajAPI.Controllers
             }
         }
 
-        public StationSetting Get(string stationName)
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                en.Configuration.ProxyCreationEnabled = false;
-                var station = en.StationSettings.Where(x => x.ComputerName == stationName).FirstOrDefault();
-                return station;
-            }
-        }
     }
 }

@@ -143,6 +143,28 @@ namespace MarcajAPI.Controllers
                 }
             }
         }
+        public HttpResponseMessage Put([FromBody] List<DineInTable> items)
+        {
+            try
+            {
+                using(dbelogikEntities en = new dbelogikEntities())
+                {
+                    foreach(var item in items)
+                    {
+                        var a = en.DineInTables.FirstOrDefault(x => x.DineInTableID == item.DineInTableID);
+
+                        a.DisplayPosition = item.DisplayPosition;
+                        en.SaveChanges();
+                    }
+                    var message = Request.CreateResponse(HttpStatusCode.Created, items);
+                    return message;
+                }
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
         public HttpResponseMessage Put([FromBody] DineInTable item, int id, string type)
         {
             try

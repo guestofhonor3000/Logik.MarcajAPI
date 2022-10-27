@@ -11,40 +11,7 @@ namespace MarcajAPI.Controllers
 {
     public class EmployeeFilesController : ApiController
     {
-        public EmployeeFile Get(string securityCode)
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                en.Configuration.ProxyCreationEnabled = false;
-                var empFile = en.EmployeeFiles.Where(e => e.AccessCode == securityCode).FirstOrDefault();
-                return empFile;
-            }
-        }
-
       
-        public List<EmployeeFile> Get()
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                en.Configuration.ProxyCreationEnabled = false;
-                return en.EmployeeFiles.ToList();
-            }
-        }
-
-       
-        public int Get(int syncEmployee)
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                int empId = 0;
-                if (syncEmployee == 0)
-                {
-                    en.Configuration.ProxyCreationEnabled = false;
-                    empId = en.EmployeeFiles.OrderByDescending(e => e.EmployeeID).FirstOrDefault().EmployeeID;
-                }
-                return empId;
-            }
-        }
         public HttpResponseMessage Put([FromBody] EmployeeFile item, int id)
         {
             try
@@ -71,7 +38,40 @@ namespace MarcajAPI.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+        public EmployeeFile Get(string securityCode)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                en.Configuration.ProxyCreationEnabled = false;
+                var empFile = en.EmployeeFiles.Where(e => e.AccessCode == securityCode).FirstOrDefault();
+                return empFile;
+            }
+        }
 
+
+        public List<EmployeeFile> Get()
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                en.Configuration.ProxyCreationEnabled = false;
+                return en.EmployeeFiles.ToList();
+            }
+        }
+
+
+        public int Get(int syncEmployee)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                int empId = 0;
+                if (syncEmployee == 0)
+                {
+                    en.Configuration.ProxyCreationEnabled = false;
+                    empId = en.EmployeeFiles.OrderByDescending(e => e.EmployeeID).FirstOrDefault().EmployeeID;
+                }
+                return empId;
+            }
+        }
         [HttpPost]
         public HttpResponseMessage Post([FromBody] List<EmployeeFile> modelList)
         {

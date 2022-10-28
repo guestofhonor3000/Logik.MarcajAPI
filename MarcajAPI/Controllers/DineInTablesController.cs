@@ -23,7 +23,54 @@ namespace MarcajAPI.Controllers
             }
         }
 
+        public List<DineInTable> Get(int dineInTableGroupID)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                en.Configuration.ProxyCreationEnabled = false;
 
+                var a = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID && x.DineInTableInActive == true).ToList();
+                return a;
+            }
+        }
+        public int GetId(int id)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
+                if (a != null)
+                {
+                    return a.EmployeeID;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+        }
+
+        public bool GetStatus(int id)
+        {
+            using (dbelogikEntities en = new dbelogikEntities())
+            {
+                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
+                if (a != null)
+                {
+                    if (a.OrderStatus == "1")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
         public List<CDineInTableAndEmpModel> Get(int dineInTableGroupID, string type)
         {
             using (dbelogikEntities en = new dbelogikEntities())
@@ -95,76 +142,7 @@ namespace MarcajAPI.Controllers
 
         }
 
-        public List<DineInTable> Get(int dineInTableGroupID)
-        {
-            using(dbelogikEntities en = new dbelogikEntities())
-            {
-                en.Configuration.ProxyCreationEnabled = false;
-
-                var a = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID && x.DineInTableInActive==true).ToList();
-                return a;
-            }
-        }
-        public int GetId(int id)
-        {
-            using(dbelogikEntities en = new dbelogikEntities())
-            {
-                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
-                if(a != null)
-                {
-                    return a.EmployeeID;
-                }
-                else
-                {
-                    return -1;
-                }
-            }
-        }
-
-        public bool GetStatus(int id)
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
-                if(a!=null)
-                {
-                    if (a.OrderStatus == "1")
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-        public HttpResponseMessage Put([FromBody] List<DineInTable> items)
-        {
-            try
-            {
-                using(dbelogikEntities en = new dbelogikEntities())
-                {
-                    foreach(var item in items)
-                    {
-                        var a = en.DineInTables.FirstOrDefault(x => x.DineInTableID == item.DineInTableID);
-
-                        a.DisplayPosition = item.DisplayPosition;
-                        en.SaveChanges();
-                    }
-                    var message = Request.CreateResponse(HttpStatusCode.Created, items);
-                    return message;
-                }
-            }
-            catch(Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
+     
         public HttpResponseMessage Put([FromBody] DineInTable item, int id, string type)
         {
             try
@@ -189,7 +167,7 @@ namespace MarcajAPI.Controllers
                         a.DisplayPosition = item.DisplayPosition;
                     }
 
-                    
+
 
                     en.SaveChanges();
                     var message = Request.CreateResponse(HttpStatusCode.Created, item);
@@ -202,13 +180,12 @@ namespace MarcajAPI.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
-
         [HttpPost]
         public HttpResponseMessage Post([FromBody] DineInTable item)
         {
             try
             {
-                using(dbelogikEntities en = new dbelogikEntities())
+                using (dbelogikEntities en = new dbelogikEntities())
                 {
                     en.DineInTables.Add(item);
                     en.SaveChanges();
@@ -218,10 +195,35 @@ namespace MarcajAPI.Controllers
                     return message;
                 }
             }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+        public HttpResponseMessage Put([FromBody] List<DineInTable> items)
+        {
+            try
+            {
+                using(dbelogikEntities en = new dbelogikEntities())
+                {
+                    foreach(var item in items)
+                    {
+                        var a = en.DineInTables.FirstOrDefault(x => x.DineInTableID == item.DineInTableID);
+
+                        a.DisplayPosition = item.DisplayPosition;
+                        en.SaveChanges();
+                    }
+                    var message = Request.CreateResponse(HttpStatusCode.Created, items);
+                    return message;
+                }
+            }
             catch(Exception ex)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+     
+
+      
     }
 }

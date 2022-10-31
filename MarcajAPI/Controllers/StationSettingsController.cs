@@ -21,6 +21,60 @@ namespace MarcajAPI.Controllers
             }
         }
 
+        public List<StationSetting> Get()
+        {
+            using(dbelogikEntities en = new dbelogikEntities())
+            {
+                en.Configuration.ProxyCreationEnabled = false;
+                var a = en.StationSettings.ToList();
+                return a;
+            }
+        }
+        public HttpResponseMessage Put([FromBody] StationSetting item)
+        {
+            try
+            {
+                using (dbelogikEntities en = new dbelogikEntities())
+                {
+                    var a = en.StationSettings.Where(x => x.StationID == item.StationID).FirstOrDefault();
+
+                    a.ComputerName = item.ComputerName;
+                    en.SaveChanges();
+
+                    var message = Request.CreateResponse(HttpStatusCode.Created);
+                    message.Headers.Location = new Uri(Request.RequestUri + a.StationID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+
+        public HttpResponseMessage Put([FromBody] StationSetting item, bool popUp)
+        {
+            try
+            {
+                using (dbelogikEntities en = new dbelogikEntities())
+                {
+                    var a = en.StationSettings.ToList();
+                    foreach(var aa in a)
+                    {
+                        aa.PopUpBool = popUp;
+                        en.SaveChanges();
+                    }
+                   
+                    var message = Request.CreateResponse(HttpStatusCode.Created);
+                    message.Headers.Location = new Uri(Request.RequestUri + a[0].StationID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
         [HttpPost]
         public HttpResponseMessage Post([FromBody] StationSetting item)
         {

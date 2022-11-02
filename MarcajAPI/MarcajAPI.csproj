@@ -164,6 +164,7 @@
     <Compile Include="Controllers\DineInTableGroupController.cs" />
     <Compile Include="Controllers\DineInTablesController.cs" />
     <Compile Include="Controllers\EmployeeFilesController.cs" />
+    <Compile Include="Controllers\LGKMClientsController.cs" />
     <Compile Include="Controllers\MenuGroupsController.cs" />
     <Compile Include="Controllers\MenuItemsController.cs" />
     <Compile Include="Controllers\OrderHeadersController.cs" />
@@ -229,6 +230,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\LGKClientsMarcaj\" />
+    <Folder Include="Views\LGKMClients\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -263,6 +266,10 @@
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{ccff5fe0-4ff4-4138-890c-c47160da98d7}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LGKDataAccess\LGKDataAccess.csproj">
+      <Project>{e0c942b9-0415-459d-8778-efbfed6f8f2f}</Project>
+      <Name>LGKDataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

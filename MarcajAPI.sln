@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcajAPI", "MarcajAPI\Marc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{CCFF5FE0-4FF4-4138-890C-C47160DA98D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGKDataAccess", "LGKDataAccess\LGKDataAccess.csproj", "{E0C942B9-0415-459D-8778-EFBFED6F8F2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CCFF5FE0-4FF4-4138-890C-C47160DA98D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCFF5FE0-4FF4-4138-890C-C47160DA98D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCFF5FE0-4FF4-4138-890C-C47160DA98D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C942B9-0415-459D-8778-EFBFED6F8F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C942B9-0415-459D-8778-EFBFED6F8F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C942B9-0415-459D-8778-EFBFED6F8F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C942B9-0415-459D-8778-EFBFED6F8F2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

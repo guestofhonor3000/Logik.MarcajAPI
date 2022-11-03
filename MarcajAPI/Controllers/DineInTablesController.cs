@@ -33,51 +33,13 @@ namespace MarcajAPI.Controllers
                 return a;
             }
         }
-        public int GetId(int id)
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
-                if (a != null)
-                {
-                    return a.EmployeeID;
-                }
-                else
-                {
-                    return -1;
-                }
-            }
-        }
-
-        public bool GetStatus(int id)
-        {
-            using (dbelogikEntities en = new dbelogikEntities())
-            {
-                var a = en.OrderHeaders.Where(x => x.DineInTableID == id).OrderByDescending(x => x.OrderID).FirstOrDefault();
-                if (a != null)
-                {
-                    if (a.OrderStatus == "1")
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
         public List<CDineInTableAndEmpModel> Get(int dineInTableGroupID, string type)
         {
             using (dbelogikEntities en = new dbelogikEntities())
             {
                 en.Configuration.ProxyCreationEnabled = false;
 
-                var returnList = new List<CDineInTableAndEmpModel>();
+                var listRet = new List<CDineInTableAndEmpModel>();
 
                 List<DineInTable> lst = new List<DineInTable>();
                 if (type == "all")
@@ -89,60 +51,35 @@ namespace MarcajAPI.Controllers
                 {
                     lst = en.DineInTables.Where(x => x.TableGroupID == dineInTableGroupID && x.DineInTableInActive == true).ToList();
                 }
-                foreach (var dine in lst)
+
+                var result = from m1 in en.OrderHeaders.ToList()
+                             join m2 in lst on m1.DineInTableID equals m2.DineInTableID
+                             select new { m1.EmployeeID, m2 } into intermediate
+                             join m3 in en.EmployeeFiles.ToList() on intermediate.EmployeeID equals m3.EmployeeID
+                             select new CDineInTableAndEmpModel {EmpName=m3.FirstName, DineIn=intermediate.m2, Opened = intermediate.m2.OrderHeaders.OrderByDescending(x=>x.OrderDateTime).FirstOrDefault().OrderStatus=="1" ? true : false};//m3.FirstName, intermediate.m2 };
+
+                var returnList = new List<CDineInTableAndEmpModel>();
+
+                foreach(var l in lst)
                 {
-                    var model = new CDineInTableAndEmpModel();
-                    model.DineIn = dine;
-                    returnList.Add(model);
+                    if(result.Where(x=> x.DineIn.DineInTableID  == l.DineInTableID).ToList().Count == 0)
+                    {
+                        var model = new CDineInTableAndEmpModel();
+                        model.DineIn = l;
+                        model.Opened = false;
+                        model.EmpName = "";
+                        returnList.Add(model);
+                    }    
+                }
+                foreach(var res in result)
+                {
+                    returnList.Add(res);
                 }
 
-                /*foreach(var item in returnList)
-                {
-                    var oH = en.OrderHeaders.Where(x => x.DineInTableID == item.DineIn.DineInTableID).OrderByDescending(x => x.OrderID).FirstOrDefault();
-                    if(oH != null)
-                    {
-                        if (oH.OrderStatus == "1")
-                        {
-                            item.Opened = true;
-                        }
-                        else
-                        {
-                            item.Opened = false;
-                        }
-                    }
-                    else
-                    {
-                        item.Opened = false;
-                    }
-                }*/
-
-                foreach (var item in returnList)
-                {
-                    var id = GetId(item.DineIn.DineInTableID);
-                    var opened = GetStatus(item.DineIn.DineInTableID);
-                    Debug.WriteLine(id);
-                    try
-                    {
-                        item.Opened = opened;
-                        var b = en.EmployeeFiles.Where(x => x.EmployeeID == id).ToList();
-                        if (b.Count != 0)
-                        {
-                            item.EmpName = b[0].FirstName;
-                           
-                        }
-                    }
-                    catch
-                    {
-
-                    }
-                }
                 return returnList;
-
             }
-
         }
-
-     
+      
         public HttpResponseMessage Put([FromBody] DineInTable item, int id, string type)
         {
             try

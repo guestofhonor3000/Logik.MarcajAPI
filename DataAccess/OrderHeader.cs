@@ -11,7 +11,8 @@ namespace DataAccess
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
     public partial class OrderHeader
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -107,9 +108,12 @@ namespace DataAccess
         public virtual ICollection<ComplimentaryAmount> ComplimentaryAmounts { get; set; }
         public virtual CustomerCredit CustomerCredit { get; set; }
         public virtual CustomerFile CustomerFile { get; set; }
+        [IgnoreDataMember]
         public virtual DineInTable DineInTable { get; set; }
         public virtual Discount Discount { get; set; }
+        [IgnoreDataMember]
         public virtual EmployeeFile EmployeeFile { get; set; }
+        [IgnoreDataMember]
         public virtual EmployeeFile EmployeeFile1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OnAccountCharge> OnAccountCharges { get; set; }

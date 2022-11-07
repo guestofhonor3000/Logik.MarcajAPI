@@ -146,7 +146,9 @@ namespace MarcajAPI.Controllers
                     foreach(var item in items)
                     {
                         var a = en.DineInTables.FirstOrDefault(x => x.DineInTableID == item.DineInTableID);
-
+                        a.Booth = item.Booth;
+                        a.Window = item.Window;
+                        a.Smoking = item.Smoking;
                         a.DisplayPosition = item.DisplayPosition;
                         en.SaveChanges();
                     }

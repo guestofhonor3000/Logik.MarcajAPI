@@ -37,7 +37,7 @@ namespace MarcajAPI.Controllers
                 using (dbelogikEntities en = new dbelogikEntities())
                 {
                     var a = en.StationSettings.Where(x => x.StationID == item.StationID).FirstOrDefault();
-
+                    a.Theme = item.Theme;
                     a.ComputerName = item.ComputerName;
                     en.SaveChanges();
 

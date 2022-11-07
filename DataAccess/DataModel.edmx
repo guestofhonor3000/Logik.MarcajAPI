@@ -346,6 +346,36 @@ warning 6002: The table/view 'dbelogik.dbo.BarTabPreAuth' does not have a primar
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.BVCoduri' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="BVCoduri">
+          <Property Name="GestiuneID" Type="int" />
+          <Property Name="NumeGestiune" Type="nvarchar" MaxLength="60" />
+          <Property Name="MenuCategoryID" Type="int" />
+          <Property Name="NumeCategorie" Type="nvarchar" MaxLength="60" />
+          <Property Name="Gestiune" Type="nvarchar" MaxLength="4" />
+          <Property Name="Den_Gestiune" Type="nvarchar" MaxLength="24" />
+          <Property Name="Cod_articol" Type="nvarchar" MaxLength="16" />
+          <Property Name="Den_articol" Type="nvarchar" MaxLength="60" />
+          <Property Name="Den_tip" Type="nvarchar" MaxLength="36" />
+          <Property Name="Cont" Type="nvarchar" MaxLength="100" />
+          <Property Name="ActivitateGrupa" Type="nvarchar" MaxLength="60" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.BVCoduriDiscounturi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="BVCoduriDiscounturi">
+          <Property Name="GestiuneID" Type="int" />
+          <Property Name="NumeGestiune" Type="nvarchar" MaxLength="60" />
+          <Property Name="MenuCategoryID" Type="int" />
+          <Property Name="NumeCategorie" Type="nvarchar" MaxLength="60" />
+          <Property Name="Gestiune" Type="nvarchar" MaxLength="4" />
+          <Property Name="Den_Gestiune" Type="nvarchar" MaxLength="24" />
+          <Property Name="Cod_articol" Type="nvarchar" MaxLength="16" />
+          <Property Name="Den_articol" Type="nvarchar" MaxLength="60" />
+          <Property Name="Den_tip" Type="nvarchar" MaxLength="36" />
+          <Property Name="Cont" Type="nvarchar" MaxLength="100" />
+          <Property Name="ActivitateGrupa" Type="nvarchar" MaxLength="60" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'dbelogik.dbo.CallerIDLogs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CallerIDLogs">
           <Key>
@@ -442,6 +472,12 @@ warning 6002: The table/view 'dbelogik.dbo.CCPreAuth' does not have a primary ke
           <Property Name="Nume" Type="nvarchar" MaxLength="50" />
           <Property Name="Descriere" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.CFlowCategoriiMap' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CFlowCategoriiMap">
+          <Property Name="CategorieID" Type="int" />
+          <Property Name="SubCategorieID" Type="int" />
+        </EntityType>-->
         <EntityType Name="CFlowConturi">
           <Key>
             <PropertyRef Name="ContID" />
@@ -644,6 +680,12 @@ warning 6002: The table/view 'dbelogik.dbo.ChecksForDeposit' does not have a pri
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.ConfRaportX' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ConfRaportX">
+          <Property Name="StationID" Type="int" />
+          <Property Name="CasaMarcatNume" Type="nvarchar" MaxLength="6" />
+        </EntityType>-->
         <EntityType Name="ContabConf">
           <Key>
             <PropertyRef Name="AutoID" />
@@ -1752,6 +1794,12 @@ warning 6002: The table/view 'dbelogik.dbo.FidelizareCFEM' does not have a prima
           <Property Name="Activat" Type="bit" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.FisiereImprimanteMultiple' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="FisiereImprimanteMultiple">
+          <Property Name="IDFisier" Type="int" />
+          <Property Name="IDImprimanta" Type="int" />
+        </EntityType>-->
         <EntityType Name="FisiereMultiple">
           <Key>
             <PropertyRef Name="ID" />
@@ -2032,6 +2080,18 @@ warning 6002: The table/view 'dbelogik.dbo.GeneralSettings' does not have a prim
           <Property Name="IPV" Type="bit" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.GestiuniMeniuri' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="GestiuniMeniuri">
+          <Property Name="MeniuID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.GestiuniProduse' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="GestiuniProduse">
+          <Property Name="ProdusID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+        </EntityType>-->
         <EntityType Name="GiftCertificates">
           <Key>
             <PropertyRef Name="GiftCertificateID" />
@@ -2432,6 +2492,15 @@ warning 6002: The table/view 'dbelogik.dbo.InventoryUOMs' does not have a primar
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.KDSTimpi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="KDSTimpi">
+          <Property Name="NrBon" Type="int" />
+          <Property Name="DataInceput" Type="datetime2" Precision="0" />
+          <Property Name="DataSfarsit" Type="datetime2" Precision="0" />
+          <Property Name="StatieDeUndeVine" Type="nvarchar" MaxLength="250" />
+          <Property Name="timer" Type="int" />
+        </EntityType>-->
         <EntityType Name="LogikPOSSettings">
           <Key>
             <PropertyRef Name="Nume" />
@@ -2514,6 +2583,20 @@ warning 6002: The table/view 'dbelogik.dbo.ManagerCashOuts' does not have a prim
           <Property Name="RemoteID" Type="int" Nullable="false" />
           <Property Name="RemoteText" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.mapInventoryItems' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="mapInventoryItems">
+          <Property Name="InventoryItemID" Type="int" />
+          <Property Name="vInventoryItemID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.mapMenuItems' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="mapMenuItems">
+          <Property Name="MenuItemID" Type="int" />
+          <Property Name="vMenuItemID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+        </EntityType>-->
         <EntityType Name="MeniuriModificatori">
           <Key>
             <PropertyRef Name="MenuModifierID" />
@@ -2791,6 +2874,24 @@ warning 6002: The table/view 'dbelogik.dbo.MenuItemIngredientsCuPierderi' does n
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.MenuItemsAttributesGlovo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="MenuItemsAttributesGlovo">
+          <Property Name="MenuItemID" Type="int" />
+          <Property Name="AttributesGroupID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.MenuItemsAttributesGlovo2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="MenuItemsAttributesGlovo2">
+          <Property Name="MenuItemID" Type="int" />
+          <Property Name="AttributesGroupID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.MenuItemsAttributesSite' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="MenuItemsAttributesSite">
+          <Property Name="MenuItemID" Type="int" />
+          <Property Name="AttributesGroupID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'dbelogik.dbo.MenuItemsGroupsGlovo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="MenuItemsGroupsGlovo">
           <Key>
@@ -3038,6 +3139,36 @@ warning 6002: The table/view 'dbelogik.dbo.NewFactura' does not have a primary k
           <Property Name="RowOwner" Type="smallint" />
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.NirCoduri' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NirCoduri">
+          <Property Name="GestiuneID" Type="int" />
+          <Property Name="NumeGestiune" Type="nvarchar" MaxLength="60" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="NumeGrup" Type="nvarchar" MaxLength="60" />
+          <Property Name="Gestiune" Type="nvarchar" MaxLength="4" />
+          <Property Name="Den_Gestiune" Type="nvarchar" MaxLength="24" />
+          <Property Name="Cod_articol" Type="nvarchar" MaxLength="16" />
+          <Property Name="Den_articol" Type="nvarchar" MaxLength="60" />
+          <Property Name="Den_tip" Type="nvarchar" MaxLength="36" />
+          <Property Name="Cont" Type="nvarchar" MaxLength="100" />
+          <Property Name="ActivitateGrupa" Type="nvarchar" MaxLength="60" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.NirCoduriDiscounturi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NirCoduriDiscounturi">
+          <Property Name="GestiuneID" Type="int" />
+          <Property Name="NumeGestiune" Type="nvarchar" MaxLength="60" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="NumeGrup" Type="nvarchar" MaxLength="60" />
+          <Property Name="Gestiune" Type="nvarchar" MaxLength="4" />
+          <Property Name="Den_Gestiune" Type="nvarchar" MaxLength="24" />
+          <Property Name="Cod_articol" Type="nvarchar" MaxLength="16" />
+          <Property Name="Den_articol" Type="nvarchar" MaxLength="60" />
+          <Property Name="Den_tip" Type="nvarchar" MaxLength="36" />
+          <Property Name="Cont" Type="nvarchar" MaxLength="100" />
+          <Property Name="ActivitateGrupa" Type="nvarchar" MaxLength="60" />
+        </EntityType>-->
         <!--Errors Found During Generation:
 warning 6002: The table/view 'dbelogik.dbo.NirSummaryUpdate' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="NirSummaryUpdate">
@@ -3396,6 +3527,11 @@ warning 6002: The table/view 'dbelogik.dbo.OrderRefunds' does not have a primary
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.OrdersWatched' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="OrdersWatched">
+          <Property Name="OrderID" Type="int" />
+        </EntityType>-->
         <EntityType Name="OrderTransactions">
           <Key>
             <PropertyRef Name="OrderTransactionID" />
@@ -3765,6 +3901,12 @@ warning 6002: The table/view 'dbelogik.dbo.PrimaryData' does not have a primary 
           <Property Name="Nume" Type="nvarchar" MaxLength="30" />
           <Property Name="Descriere" Type="nvarchar" MaxLength="255" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.ProfileGestiuni' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ProfileGestiuni">
+          <Property Name="ProfilID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+        </EntityType>-->
         <EntityType Name="ProfileInventoryItems">
           <Key>
             <PropertyRef Name="InventoryItemID" />
@@ -3772,6 +3914,13 @@ warning 6002: The table/view 'dbelogik.dbo.PrimaryData' does not have a primary 
           <Property Name="InventoryItemID" Type="int" Nullable="false" />
           <Property Name="ProfilID" Type="int" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.ProfileMapari' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ProfileMapari">
+          <Property Name="ProfilID" Type="int" />
+          <Property Name="StationID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+        </EntityType>-->
         <EntityType Name="ProfileMenuItems">
           <Key>
             <PropertyRef Name="MenuItemID" />
@@ -4408,6 +4557,21 @@ warning 6002: The table/view 'dbelogik.dbo.RowDeleteLog' does not have a primary
           <Property Name="RowOwner" Type="smallint" />
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.ScadereME' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ScadereME">
+          <Property Name="AutoID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.SCloudClienti' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SCloudClienti">
+          <Property Name="ClientID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.SCloudFurnizori' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SCloudFurnizori">
+          <Property Name="FurnizorID" Type="int" />
+        </EntityType>-->
         <EntityType Name="SecuritySettings">
           <Key>
             <PropertyRef Name="SecuritySettingID" />
@@ -4483,6 +4647,22 @@ warning 6002: The table/view 'dbelogik.dbo.sOrderPayments' does not have a prima
           <Property Name="PaymentDateTime" Type="datetime2" Precision="0" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.StationInventoryItems' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="StationInventoryItems">
+          <Property Name="InventoryItemID" Type="int" />
+          <Property Name="StationID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+          <Property Name="vInventoryItemID" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'dbelogik.dbo.StationMenuItems' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="StationMenuItems">
+          <Property Name="MenuItemID" Type="int" />
+          <Property Name="StationID" Type="int" />
+          <Property Name="GestiuneID" Type="int" />
+          <Property Name="vMenuItemID" Type="int" />
+        </EntityType>-->
         <EntityType Name="StationSettings">
           <Key>
             <PropertyRef Name="StationID" />
@@ -4572,6 +4752,7 @@ warning 6002: The table/view 'dbelogik.dbo.sOrderPayments' does not have a prima
           <Property Name="RowGUID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="PopUpBool" Type="bit" />
+          <Property Name="Theme" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="StocuriHistory">
           <Key>
@@ -12273,6 +12454,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <NavigationProperty Name="RegisterCashiers" Relationship="Self.RegisterCashiers__253F13B8_91C6_4121_8D26_A4B7E7447E42_" FromRole="StationSettings" ToRole="RegisterCashiers" />
           <NavigationProperty Name="AccessDeniedLogs" Relationship="Self.AccessDeniedLogs__B6EE87BF_AF96_4895_ABFC_37A4CE5ED35D_" FromRole="StationSettings" ToRole="AccessDeniedLogs" />
           <Property Name="PopUpBool" Type="Boolean" />
+          <Property Name="Theme" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="StocuriHistory">
           <Key>
@@ -19836,6 +20018,7 @@ warning 6035: The relationship 'ModBuilderDetails${ECD3D44B-8507-4CC5-B469-C0A60
           <EntitySetMapping Name="StationSettings">
             <EntityTypeMapping TypeName="dbelogikModel.StationSetting">
               <MappingFragment StoreEntitySet="StationSettings">
+                <ScalarProperty Name="Theme" ColumnName="Theme" />
                 <ScalarProperty Name="PopUpBool" ColumnName="PopUpBool" />
                 <ScalarProperty Name="StationID" ColumnName="StationID" />
                 <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />

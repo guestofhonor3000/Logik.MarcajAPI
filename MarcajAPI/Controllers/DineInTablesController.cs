@@ -56,8 +56,7 @@ namespace MarcajAPI.Controllers
                              join m2 in lst on m1.DineInTableID equals m2.DineInTableID
                              select new { m1.EmployeeID, m2 } into intermediate
                              join m3 in en.EmployeeFiles.ToList() on intermediate.EmployeeID equals m3.EmployeeID
-                             select new CDineInTableAndEmpModel {EmpName=m3.FirstName, DineIn=intermediate.m2, Opened = intermediate.m2.OrderHeaders.OrderByDescending(x=>x.OrderDateTime).FirstOrDefault().OrderStatus=="1" ? true : false};//m3.FirstName, intermediate.m2 };
-
+                             select new CDineInTableAndEmpModel {EmpName=m3.FirstName, DineIn=intermediate.m2, Opened = intermediate.m2.OrderHeaders.OrderByDescending(x=>x.OrderDateTime).FirstOrDefault().OrderStatus=="1" ? true : false, TimeOpened = intermediate.m2.OrderHeaders.OrderByDescending(x=> x.OrderDateTime).FirstOrDefault().OrderDateTime.AddHours(2)};           
                 var returnList = new List<CDineInTableAndEmpModel>();
 
                 foreach(var l in lst)
@@ -67,6 +66,7 @@ namespace MarcajAPI.Controllers
                         var model = new CDineInTableAndEmpModel();
                         model.DineIn = l;
                         model.Opened = false;
+                        model.TimeOpened = DateTime.MinValue;
                         model.EmpName = "";
                         returnList.Add(model);
                     }    

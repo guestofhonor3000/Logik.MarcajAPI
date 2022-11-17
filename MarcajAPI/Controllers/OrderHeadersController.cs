@@ -118,7 +118,32 @@ namespace MarcajAPI.Controllers
                 return a;
             }
         }
+        public HttpResponseMessage Put([FromBody] OrderHeader item, int id, string type)
+        {
+            try
+            {
+                using (dbelogikEntities en = new dbelogikEntities())
+                {
 
+                    if(type == "synchver")
+                    {
+                        var a = en.OrderHeaders.FirstOrDefault(x => x.OrderID == id);
+                        //a.EditTimestamp = item.OrderDateTime;
+                        a.SynchVer = item.SynchVer;
+                        en.SaveChanges();
+                    }
+                   
+
+                    var message = Request.CreateResponse(HttpStatusCode.Created, item);
+                    message.Headers.Location = new Uri(Request.RequestUri + item.OrderID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
         public HttpResponseMessage Put([FromBody] OrderHeader item, int id)
         {
             try

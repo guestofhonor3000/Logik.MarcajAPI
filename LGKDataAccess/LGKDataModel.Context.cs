@@ -26,5 +26,6 @@ namespace LGKDataAccess
         }
     
         public virtual DbSet<LGKMarcajClient> LGKMarcajClients { get; set; }
+        public virtual DbSet<LGKLocation> LGKLocations { get; set; }
     }
 }

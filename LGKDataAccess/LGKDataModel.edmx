@@ -4,7 +4,42 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="lgkdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="lgkdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'lgkdatabase.dbo.LGKLocations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LGKLocations">
+          <Key>
+            <PropertyRef Name="IDLocatie" />
+            <PropertyRef Name="NumeLocatie" />
+            <PropertyRef Name="IPs" />
+            <PropertyRef Name="Port" />
+          </Key>
+          <Property Name="IDLocatie" Type="int" Nullable="false" />
+          <Property Name="NumeLocatie" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IPs" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Port" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="GlAuth" Type="nvarchar(max)" />
+          <Property Name="GlCheckSite" Type="nvarchar(max)" />
+          <Property Name="GlMenuSite" Type="nvarchar(max)" />
+          <Property Name="GlIDStatie" Type="nvarchar(max)" />
+          <Property Name="GlIDAngajat" Type="nvarchar(max)" />
+          <Property Name="GlIDClient" Type="nvarchar(max)" />
+          <Property Name="GlStoreID" Type="nvarchar(max)" />
+          <Property Name="GlPartnerName" Type="nvarchar(max)" />
+          <Property Name="GlStoreEnvironment" Type="nvarchar(max)" />
+          <Property Name="Gl2IDStatie" Type="nvarchar(max)" />
+          <Property Name="Gl2IDAngajat" Type="nvarchar(max)" />
+          <Property Name="Gl2IDClient" Type="nvarchar(max)" />
+          <Property Name="Gl2StoreID" Type="nvarchar(max)" />
+          <Property Name="Gl2PartnerName" Type="nvarchar(max)" />
+          <Property Name="Gl2StoreEnvironment" Type="nvarchar(max)" />
+          <Property Name="SiteIDStatie" Type="nvarchar(max)" />
+          <Property Name="SiteIDAngajat" Type="nvarchar(max)" />
+          <Property Name="SiteIDClient" Type="nvarchar(max)" />
+          <Property Name="GlAdaugaPlata" Type="bit" />
+          <Property Name="Gl2AdaugaPlata" Type="bit" />
+          <Property Name="SiteIPLocal" Type="varchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="LGKMarcajClients">
           <Key>
             <PropertyRef Name="ID" />
@@ -15,9 +50,37 @@
         </EntityType>
         <EntityContainer Name="lgkdatabaseModelStoreContainer">
           <EntitySet Name="LGKMarcajClients" EntityType="Self.LGKMarcajClients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LGKLocations" EntityType="Self.LGKLocations" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LGKLocations].[IDLocatie] AS [IDLocatie], 
+    [LGKLocations].[NumeLocatie] AS [NumeLocatie], 
+    [LGKLocations].[IPs] AS [IPs], 
+    [LGKLocations].[Port] AS [Port], 
+    [LGKLocations].[GlAuth] AS [GlAuth], 
+    [LGKLocations].[GlCheckSite] AS [GlCheckSite], 
+    [LGKLocations].[GlMenuSite] AS [GlMenuSite], 
+    [LGKLocations].[GlIDStatie] AS [GlIDStatie], 
+    [LGKLocations].[GlIDAngajat] AS [GlIDAngajat], 
+    [LGKLocations].[GlIDClient] AS [GlIDClient], 
+    [LGKLocations].[GlStoreID] AS [GlStoreID], 
+    [LGKLocations].[GlPartnerName] AS [GlPartnerName], 
+    [LGKLocations].[GlStoreEnvironment] AS [GlStoreEnvironment], 
+    [LGKLocations].[Gl2IDStatie] AS [Gl2IDStatie], 
+    [LGKLocations].[Gl2IDAngajat] AS [Gl2IDAngajat], 
+    [LGKLocations].[Gl2IDClient] AS [Gl2IDClient], 
+    [LGKLocations].[Gl2StoreID] AS [Gl2StoreID], 
+    [LGKLocations].[Gl2PartnerName] AS [Gl2PartnerName], 
+    [LGKLocations].[Gl2StoreEnvironment] AS [Gl2StoreEnvironment], 
+    [LGKLocations].[SiteIDStatie] AS [SiteIDStatie], 
+    [LGKLocations].[SiteIDAngajat] AS [SiteIDAngajat], 
+    [LGKLocations].[SiteIDClient] AS [SiteIDClient], 
+    [LGKLocations].[GlAdaugaPlata] AS [GlAdaugaPlata], 
+    [LGKLocations].[Gl2AdaugaPlata] AS [Gl2AdaugaPlata], 
+    [LGKLocations].[SiteIPLocal] AS [SiteIPLocal]
+    FROM [dbo].[LGKLocations] AS [LGKLocations]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="lgkdatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -31,7 +94,41 @@
         </EntityType>
         <EntityContainer Name="lgkdatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="LGKMarcajClients" EntityType="Self.LGKMarcajClient" />
+          <EntitySet Name="LGKLocations" EntityType="lgkdatabaseModel.LGKLocation" />
         </EntityContainer>
+        <EntityType Name="LGKLocation">
+          <Key>
+            <PropertyRef Name="IDLocatie" />
+            <PropertyRef Name="NumeLocatie" />
+            <PropertyRef Name="IPs" />
+            <PropertyRef Name="Port" />
+          </Key>
+          <Property Name="IDLocatie" Type="Int32" Nullable="false" />
+          <Property Name="NumeLocatie" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IPs" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Port" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlAuth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlCheckSite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlMenuSite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlIDStatie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlIDAngajat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlIDClient" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlStoreID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlPartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlStoreEnvironment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gl2IDStatie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gl2IDAngajat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gl2IDClient" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gl2StoreID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gl2PartnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gl2StoreEnvironment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SiteIDStatie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SiteIDAngajat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SiteIDClient" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GlAdaugaPlata" Type="Boolean" />
+          <Property Name="Gl2AdaugaPlata" Type="Boolean" />
+          <Property Name="SiteIPLocal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -44,6 +141,37 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ClientName" ColumnName="ClientName" />
                 <ScalarProperty Name="ClientDbCode" ColumnName="ClientDbCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LGKLocations">
+            <EntityTypeMapping TypeName="lgkdatabaseModel.LGKLocation">
+              <MappingFragment StoreEntitySet="LGKLocations">
+                <ScalarProperty Name="SiteIPLocal" ColumnName="SiteIPLocal" />
+                <ScalarProperty Name="Gl2AdaugaPlata" ColumnName="Gl2AdaugaPlata" />
+                <ScalarProperty Name="GlAdaugaPlata" ColumnName="GlAdaugaPlata" />
+                <ScalarProperty Name="SiteIDClient" ColumnName="SiteIDClient" />
+                <ScalarProperty Name="SiteIDAngajat" ColumnName="SiteIDAngajat" />
+                <ScalarProperty Name="SiteIDStatie" ColumnName="SiteIDStatie" />
+                <ScalarProperty Name="Gl2StoreEnvironment" ColumnName="Gl2StoreEnvironment" />
+                <ScalarProperty Name="Gl2PartnerName" ColumnName="Gl2PartnerName" />
+                <ScalarProperty Name="Gl2StoreID" ColumnName="Gl2StoreID" />
+                <ScalarProperty Name="Gl2IDClient" ColumnName="Gl2IDClient" />
+                <ScalarProperty Name="Gl2IDAngajat" ColumnName="Gl2IDAngajat" />
+                <ScalarProperty Name="Gl2IDStatie" ColumnName="Gl2IDStatie" />
+                <ScalarProperty Name="GlStoreEnvironment" ColumnName="GlStoreEnvironment" />
+                <ScalarProperty Name="GlPartnerName" ColumnName="GlPartnerName" />
+                <ScalarProperty Name="GlStoreID" ColumnName="GlStoreID" />
+                <ScalarProperty Name="GlIDClient" ColumnName="GlIDClient" />
+                <ScalarProperty Name="GlIDAngajat" ColumnName="GlIDAngajat" />
+                <ScalarProperty Name="GlIDStatie" ColumnName="GlIDStatie" />
+                <ScalarProperty Name="GlMenuSite" ColumnName="GlMenuSite" />
+                <ScalarProperty Name="GlCheckSite" ColumnName="GlCheckSite" />
+                <ScalarProperty Name="GlAuth" ColumnName="GlAuth" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="IPs" ColumnName="IPs" />
+                <ScalarProperty Name="NumeLocatie" ColumnName="NumeLocatie" />
+                <ScalarProperty Name="IDLocatie" ColumnName="IDLocatie" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

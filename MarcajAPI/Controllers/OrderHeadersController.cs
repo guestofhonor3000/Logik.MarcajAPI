@@ -132,15 +132,27 @@ namespace MarcajAPI.Controllers
                         a.SynchVer = item.SynchVer;
                         en.SaveChanges();
                     }
-                   
-
+                    if(type == "moveorder")
+                    {
+                        var a = en.OrderHeaders.FirstOrDefault(x => x.OrderID == id);
+                        //a.EditTimestamp = item.OrderDateTime;
+                        a.DineInTableID = item.DineInTableID;
+                        en.SaveChanges();
+                    }
+                    if (type == "moveemp")
+                    {
+                        var a = en.OrderHeaders.FirstOrDefault(x => x.OrderID == id);
+                        //a.EditTimestamp = item.OrderDateTime;
+                        a.EmployeeID = item.EmployeeID;
+                        en.SaveChanges();
+                    }
                     var message = Request.CreateResponse(HttpStatusCode.Created, item);
                     message.Headers.Location = new Uri(Request.RequestUri + item.OrderID.ToString());
                     return message;
                 }
             }
             catch (Exception ex)
-            {
+            {                                                                     
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
@@ -152,9 +164,10 @@ namespace MarcajAPI.Controllers
                 {
 
                     var a = en.OrderHeaders.FirstOrDefault(x => x.OrderID == id);
-
+                    a.SynchVer = item.SynchVer;
                     a.AmountDue = item.AmountDue;
                     a.SubTotal = item.SubTotal;
+                    a.OrderStatus = item.OrderStatus;
                     en.SaveChanges();
 
                     var message = Request.CreateResponse(HttpStatusCode.Created, item);

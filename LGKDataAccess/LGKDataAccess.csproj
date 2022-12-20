@@ -65,6 +65,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LGKDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="LGKLocation.cs">
+      <DependentUpon>LGKDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LGKMarcajClient.cs">
       <DependentUpon>LGKDataModel.tt</DependentUpon>
     </Compile>

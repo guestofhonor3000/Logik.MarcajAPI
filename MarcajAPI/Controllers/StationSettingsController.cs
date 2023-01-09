@@ -30,6 +30,29 @@ namespace MarcajAPI.Controllers
                 return a;
             }
         }
+        public HttpResponseMessage Put([FromBody] StationSetting item, bool popUp)
+        {
+            try
+            {
+                using (dbelogikEntities en = new dbelogikEntities())
+                {
+                    var a = en.StationSettings.ToList();
+                    foreach (var aa in a)
+                    {
+                        aa.PopUpBool = popUp;
+                        en.SaveChanges();
+                    }
+
+                    var message = Request.CreateResponse(HttpStatusCode.Created);
+                    message.Headers.Location = new Uri(Request.RequestUri + a[0].StationID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
         public HttpResponseMessage Put([FromBody] StationSetting item)
         {
             try
@@ -52,29 +75,7 @@ namespace MarcajAPI.Controllers
             }
         }
 
-        public HttpResponseMessage Put([FromBody] StationSetting item, bool popUp)
-        {
-            try
-            {
-                using (dbelogikEntities en = new dbelogikEntities())
-                {
-                    var a = en.StationSettings.ToList();
-                    foreach(var aa in a)
-                    {
-                        aa.PopUpBool = popUp;
-                        en.SaveChanges();
-                    }
-                   
-                    var message = Request.CreateResponse(HttpStatusCode.Created);
-                    message.Headers.Location = new Uri(Request.RequestUri + a[0].StationID.ToString());
-                    return message;
-                }
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
+      
         [HttpPost]
         public HttpResponseMessage Post([FromBody] StationSetting item)
         {
